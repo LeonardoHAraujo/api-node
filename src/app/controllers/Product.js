@@ -1,7 +1,12 @@
+const ProductModel = require('../models/ProductModel')
+const productModel = new ProductModel()
+
+const { request, response } = require('express')
+
 class Product {
     
-    read(req, res) {
-        res.json({ hello: 'word'})
+    read() {
+        
     }
 
     create() {
