@@ -1,12 +1,12 @@
-const ProductModel = require('../models/ProductModel')
-const productModel = new ProductModel()
-
+const knex = require('../database/index')
 const { request, response } = require('express')
 
 class Product {
     
-    read() {
-        
+    read(request, response) {
+        knex('products').then(res => {
+            return response.json(res)
+        })
     }
 
     create() {
